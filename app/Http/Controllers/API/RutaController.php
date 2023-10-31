@@ -48,4 +48,8 @@ class RutaController extends Controller
         $data = Frecuencia::where('idDetalleRuta', $idDetalleRuta)->get();
         return response()->json($data, 200);
     }
+    public function getDetalleRuta($idRuta){
+        $data = DetalleRuta::where('idRuta', $idRuta)->first();
+        return response()->json($data, 200);
+    }
 }

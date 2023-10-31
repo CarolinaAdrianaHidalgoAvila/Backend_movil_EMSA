@@ -25,6 +25,7 @@ Route::prefix('contenedor')->group(function () {
 });
 Route::prefix('ruta')->group(function () {
     Route::get('/detalles/{zona}',[ RutaController::class, 'obtenerDetallesPorZona']);
+    Route::get('/{id}/detalles',[ RutaController::class, 'getDetalleRuta']);
     Route::get('/{id}',[ RutaController::class, 'getRuta']);
     Route::get('/{id}/puntos',[ RutaController::class, 'getPuntosRuta']);
     Route::get('/detalles/{idDetalle}/frecuencias',[ RutaController::class, 'getFrecuencia']);
